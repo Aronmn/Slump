@@ -25,6 +25,25 @@ namespace Slump
 
             //Övning 2
 
+            Console.WriteLine("Programmet slumpar fram 20 tal mellan 15-30 och beräknar medianvärdet");
+            Random slump1 = new Random();
+            int[] tal1 = new int[20];
+
+            for (int i = 0; i < 20; i++)
+            {
+                tal1[i] = slump1.Next(15, 31);
+                Console.Write(tal1[i] + " ");
+            }
+
+            Console.WriteLine("Medianen är ");
+            Array.Sort(tal1);
+
+            for (int i = 0; i < 20; i++)
+            {
+                 Console.Write(tal1[i] + " ");
+                
+            }
+            Console.Write((tal1[9] + tal1[10])/2);
 
         }
     }
